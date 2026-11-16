@@ -11,6 +11,6 @@
     "noEmitOnError": true,
     "skipLibCheck": true
   },
-  "include": ["tasks/**/*.ts"],
+  "include": ["problems/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }
