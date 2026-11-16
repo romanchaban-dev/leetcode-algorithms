@@ -1,145 +1,68 @@
-# Return to Sky
+# TypeScript Algorithms & LeetCode Solutions
 
-This repository is my personal collection of algorithmic problem solutions, mainly from LeetCode, written in TypeScript. The goal is to practice data structures, problem-solving patterns, and clean coding habits while preparing for technical interviews and improving my algorithmic thinking.
+A focused collection of algorithm and data-structure solutions written in TypeScript. This repository documents my ongoing practice with common technical-interview problem patterns, with an emphasis on readable implementations, explicit types, and time/space complexity.
 
-## What this repo contains
+## What you'll find
 
-I organize each problem in its own folder under `problems/`, with a single file named `solution.ts` containing the implementation and a short explanation of the approach.
+- Solutions to LeetCode problems, organized by problem number and name
+- Practice implementations of fundamental algorithms
+- TypeScript types for function inputs, outputs, and data structures
+- Complexity notes alongside solutions
+- A strict TypeScript configuration and simple build/type-check scripts
 
-Examples from this repo include:
+## Topics
 
-- Two Sum
-- Valid Palindrome
-- Longest Substring Without Repeating Characters
-- Binary Search
-- Search Insert Position
-- Fruit Into Baskets
-- Merge Sorted Array
-- Maximum Average Subarray I
-
-The solutions focus on practical interview-level patterns such as:
-
+- Arrays and strings
 - Hash maps and sets
 - Two pointers
 - Sliding window
 - Binary search
-- Array manipulation
-- Greedy and counting techniques
+- In-place array manipulation
 
-## Repository structure
+## Selected solutions
 
-```text
-leetcode-algorithms/
-├── problems/
-│   ├── 1-two-sum/
-│   │   └── solution.ts
-│   ├── 3-longest-substring-without-repeating-characters/
-│   │   └── solution.ts
-│   ├── 35-search-insert-position/
-│   │   └── solution.ts
-│   └── ...
-├── dist/
-├── node_modules/
-├── package.json
-├── tsconfig.json
-├── README.md
-├── algorithm.doc
-└── .gitignore
-```
+| Problem | Main pattern |
+| --- | --- |
+| [Two Sum](problems/1-two-sum/solution.ts) | Hash map |
+| [Longest Substring Without Repeating Characters](problems/3-longest-substring-without-repeating-characters/solution.ts) | Sliding window |
+| [Merge Sorted Array](problems/88-merge-sorted-array/solution.ts) | Two pointers |
+| [Group Anagrams](problems/49-group-anagrams/solution.ts) | Hash map |
+| [Maximum Average Subarray I](problems/643-maximum-average-subarray-i/solution.ts) | Fixed-size sliding window |
+| [Binary Search](problems/704-binary-search/solution.ts) | Binary search |
+| [Fruit Into Baskets](problems/904-fruit-into-baskets/solution.ts) | Sliding window |
 
-Each problem folder contains one solution file, and the project compiles TypeScript sources into the `dist/` directory.
-
-## Why this repo is useful
-
-This project helps me:
-
-- practice algorithmic thinking regularly
-- review patterns I have already solved
-- keep solutions organized by topic and difficulty
-- improve TypeScript skills while solving real coding problems
-- build a quick reference for later revision
-
-## Getting started
-
-1. Install dependencies:
-
-```bash
-npm install
-```
-
-2. Build the TypeScript solutions:
-
-```bash
-npm run build
-```
-
-3. Type-check without emitting files:
-
-```bash
-npm run typecheck
-```
-
-## Project scripts
-
-The project uses a minimal setup:
-
-- `npm run build` — compiles TypeScript files from `problems/` to `dist/`
-- `npm run typecheck` — checks for TypeScript errors without generating output
-
-## How solutions are written
-
-Each solution follows a similar pattern:
-
-```ts
-// LeetCode 1: Two Sum
-// https://leetcode.com/problems/two-sum/
-
-const twoSum = (numbers: number[], target: number): number[] | undefined => {
-  const hashMap = new Map<number, number>();
-
-  for (let i = 0; i < numbers.length; i++) {
-    const needed = target - numbers[i];
-    const match = hashMap.get(needed);
-
-    if (match !== undefined) {
-      return [match, i];
-    }
-
-    hashMap.set(numbers[i], i);
-  }
-};
-
-// Time: O(n)
-// Space: O(n)
-```
-
-Typical conventions in this repo:
-
-- one problem = one folder
-- file name is always `solution.ts`
-- function names match the problem concept
-- comments include problem title and LeetCode URL
-- time and space complexity are noted at the end
-
-## Adding a new problem
-
-To add a new LeetCode task:
-
-1. Create a folder named like `problems/242-valid-anagram/`
-2. Add a file named `solution.ts`
-3. Write the implementation and complexity notes
-4. Run `npm run build` to verify it compiles
-
-Example:
+## Project structure
 
 ```text
 problems/
-└── 242-valid-anagram/
-    └── solution.ts
+├── 1-two-sum/
+│   └── solution.ts
+├── 3-longest-substring-without-repeating-characters/
+│   └── solution.ts
+├── ...
+└── practice/
+    └── solutions.ts
 ```
 
-## Notes
+Each numbered directory contains a standalone `solution.ts` file. The `practice/` directory contains additional algorithm exercises.
 
-This repository is intentionally simple and focused on problem-solving practice. It is not a full production app; it is a structured set of algorithmic exercises and reference solutions.
+## Getting started
 
-If you are exploring this project, think of it as a personal coding notebook for interview preparation and algorithm mastery.
+Requirements: Node.js and npm.
+
+```bash
+npm ci
+npm run typecheck
+npm run build
+```
+
+`npm run typecheck` checks the TypeScript sources without emitting files. `npm run build` compiles them into `dist/`.
+
+## Adding a solution
+
+1. Create a directory under `problems/` named with the problem number and a short title.
+2. Add a `solution.ts` file with the implementation.
+3. Include the problem link and time/space complexity in the source comments.
+4. Run `npm run typecheck` to check the project.
+
+This is an evolving practice repository, not a production application. Solutions may be refined as I revisit problems and explore alternative approaches.
