@@ -1,7 +1,7 @@
 // LeetCode 1004: Max Consecutive Ones III
 // https://leetcode.com/problems/max-consecutive-ones-iii/
 
-const maxConsecutiveOnes = (numbers, k) => {
+const maxConsecutiveOnes = (numbers: Array<number>, k: number): number => {
   if (!Array.isArray(numbers))
     throw new TypeError("Parametr numbers must be an array type");
 

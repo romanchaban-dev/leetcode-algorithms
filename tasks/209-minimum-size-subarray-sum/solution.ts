@@ -1,7 +1,10 @@
 // LeetCode 209: Minimum Size Subarray Sum
 // https://leetcode.com/problems/minimum-size-subarray-sum/
 
-const minSizeOfSubarraySum = (numbers, target) => {
+const minSizeOfSubarraySum = (
+  numbers: Array<number>,
+  target: number,
+): number => {
   let left = 0;
   let right = 0;
   let sum = 0;

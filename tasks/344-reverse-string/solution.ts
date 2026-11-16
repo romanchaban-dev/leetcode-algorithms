@@ -1,7 +1,7 @@
 // LeetCode 344: Reverse String
 // https://leetcode.com/problems/reverse-string/
 
-const reverseString = (arrayOfSymbols) => {
+const reverseString = (arrayOfSymbols: Array<string>): Array<string> => {
   let left = 0;
   let right = arrayOfSymbols.length - 1;
 

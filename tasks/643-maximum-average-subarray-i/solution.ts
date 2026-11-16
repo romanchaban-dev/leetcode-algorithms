@@ -1,7 +1,7 @@
 // LeetCode 643: Maximum Average Subarray I
 // https://leetcode.com/problems/maximum-average-subarray-i/
 
-const sllibingWindow = (numbers, k) => {
+const sllibingWindow = (numbers: Array<number>, k: number): number => {
   let left = 0;
   let right = k - 1;
 

@@ -1,7 +1,12 @@
 // LeetCode 88: Merge Sorted Array
 // https://leetcode.com/problems/merge-sorted-array/
 
-const mergeSortedArrays = (nums1, nums2, m, n) => {
+const mergeSortedArrays = (
+  nums1: Array<number>,
+  nums2: Array<number>,
+  m: number,
+  n: number,
+): Array<number> => {
   let i = m - 1;
   let j = n - 1;
   let k = m + n - 1;

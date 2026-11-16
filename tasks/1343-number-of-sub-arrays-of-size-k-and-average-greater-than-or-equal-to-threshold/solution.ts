@@ -1,7 +1,11 @@
 // LeetCode 1343: Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold
 // https://leetcode.com/problems/number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/
 
-const numOfSubarrays = (arr, k, threshold) => {
+const numOfSubarrays = (
+  arr: Array<number>,
+  k: number,
+  threshold: number,
+): number => {
   let left = 0;
   let right = k - 1;
   let arithmeticMeanCount = 0;

@@ -1,7 +1,7 @@
 // LeetCode 125: Valid Palindrome
 // https://leetcode.com/problems/valid-palindrome/
 
-const isPalindrome = (string) => {
+const isPalindrome = (string: string): boolean => {
   if (typeof string !== "string")
     throw new TypeError("Parametr string must be string");
 

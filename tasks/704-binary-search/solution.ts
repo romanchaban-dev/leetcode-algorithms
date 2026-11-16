@@ -1,7 +1,7 @@
-// LeetCode 35: Search Insert Position
-// https://leetcode.com/problems/search-insert-position/
+// LeetCode 704: Binary Search
+// https://leetcode.com/problems/binary-search/
 
-const searchInsertPosition = (numbers, target) => {
+const binarySearch = (numbers: Array<number>, target: number): number => {
   let left = 0;
   let right = numbers.length - 1;
 
@@ -17,7 +17,7 @@ const searchInsertPosition = (numbers, target) => {
     }
   }
 
-  return left;
+  return -1;
 };
 
 // Time: O(log n)

@@ -1,7 +1,7 @@
 // LeetCode 1456: Maximum Number of Vowels in a Substring of Given Length
 // https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/
 
-const maxVowels = (string, kUnique) => {
+const maxVowels = (string: string, kUnique: number): number => {
   const vowels = "aeiou";
   let currVowelsCount = 0;
   let maxVowelsCount = currVowelsCount;

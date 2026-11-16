@@ -1,7 +1,7 @@
 // LeetCode 904: Fruit Into Baskets
 // https://leetcode.com/problems/fruit-into-baskets/
 
-const totalFruit = (fruits) => {
+const totalFruit = (fruits: Array<number>): number => {
   if (!Array.isArray(fruits))
     throw new TypeError("Parametr fruits must be an array type");
 

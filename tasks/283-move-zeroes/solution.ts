@@ -1,7 +1,7 @@
 // LeetCode 283: Move Zeroes
 // https://leetcode.com/problems/move-zeroes/
 
-const moveZeros = (numbers) => {
+const moveZeros = (numbers: Array<number>) => {
   let left = 0;
   let right = 0;
 

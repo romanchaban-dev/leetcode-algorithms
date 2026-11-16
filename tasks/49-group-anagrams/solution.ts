@@ -1,8 +1,8 @@
 // LeetCode 49: Group Anagrams
 // https://leetcode.com/problems/group-anagrams/
 
-const groupAnagrams = (strs) => {
-  const groupedAnagrams = new Map();
+const groupAnagrams = (strs: Array<string>): Array<Array<string>> => {
+  const groupedAnagrams = new Map<string, Array<string>>();
 
   for (const string of strs) {
     const sortedKey = string.split("").sort().join("");
@@ -11,11 +11,16 @@ const groupAnagrams = (strs) => {
       groupedAnagrams.set(sortedKey, [string]);
     } else {
       const anagramsArray = groupedAnagrams.get(sortedKey);
-      anagramsArray.push(string);
+
+      if (anagramsArray) {
+        anagramsArray.push(string);
+      } else {
+        groupedAnagrams.set(sortedKey, [string]);
+      }
     }
   }
 
-  return Array.from(groupedAnagrams).map(([_, anagrams]) => anagrams);
+  return Array.from(groupedAnagrams.values());
 };
 
 // Time: O(n * k log k), where n is the number of strings and k is the maximum string length

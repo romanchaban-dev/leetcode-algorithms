@@ -1,7 +1,7 @@
 // LeetCode 121: Best Time to Buy and Sell Stock
 // https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 
-const maxProfit = (prices) => {
+const maxProfit = (prices: Array<number>): number => {
   let action = prices[0];
 
   let bestIncome = 0;

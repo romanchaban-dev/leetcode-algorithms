@@ -1,6 +1,6 @@
 "use strict";
 
-const findMax = (numbers) => {
+const findMax = (numbers: Array<number>): number => {
   let maxNumber = numbers[0];
 
   for (let i = 1; i < numbers.length; i++) {
@@ -15,7 +15,7 @@ const findMax = (numbers) => {
 // Time: O(n)
 // Space: O(1)
 
-const findMin = (numbers) => {
+const findMin = (numbers: Array<number>): number => {
   let minNumber = numbers[0];
 
   for (let i = 1; i < numbers.length; i++) {
@@ -30,12 +30,12 @@ const findMin = (numbers) => {
 // Time: O(n)
 // Space: O(1)
 
-const findSecondMax = (numbers) => {
+const findSecondMax = (numbers: Array<number>): number | null => {
   if (!Array.isArray(numbers))
     throw new TypeError("Parametr numbers must be an array");
 
   let max = numbers[0];
-  let secondMax = null;
+  let secondMax: number | null = null;
 
   for (let i = 1; i < numbers.length; i++) {
     if (numbers[i] > max) {
@@ -43,7 +43,7 @@ const findSecondMax = (numbers) => {
       max = numbers[i];
     }
 
-    if (numbers[i] < max && (numbers[i] > secondMax || secondMax === null)) {
+    if (numbers[i] < max && (secondMax === null || numbers[i] > secondMax)) {
       secondMax = numbers[i];
     }
   }
@@ -54,7 +54,7 @@ const findSecondMax = (numbers) => {
 // Time: O(n)
 // Space: O(1)
 
-const countOccurrences = (numbers, target) => {
+const countOccurrences = (numbers: Array<number>, target: number) => {
   if (!Array.isArray(numbers))
     throw new TypeError("Numbers must be an array type");
 
@@ -74,7 +74,7 @@ const countOccurrences = (numbers, target) => {
 // Time: O(n)
 // Space: O(1)
 
-const reverseArray = (numbers) => {
+const reverseArray = (numbers: Array<number>): Array<number> => {
   if (!Array.isArray(numbers))
     throw new TypeError("Numbers must be an array type");
 
