@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "rootDir": "tasks",
+    "outDir": "dist",
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleDetection": "force",
+    "noEmitOnError": true,
+    "skipLibCheck": true
+  },
+  "include": ["tasks/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}
