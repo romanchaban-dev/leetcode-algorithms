@@ -1,4 +1,4 @@
-# Return to Sky
+# Leetcode Algorithms
 
 This repository is my personal collection of algorithmic problem solutions, mainly from LeetCode, written in TypeScript. The goal is to practice data structures, problem-solving patterns, and clean coding habits while preparing for technical interviews and improving my algorithmic thinking.
 
