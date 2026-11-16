@@ -1,7 +1,7 @@
 // LeetCode 26: Remove Duplicates from Sorted Array
 // https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 
-const removeDuplicatesFromSortedArray = (numbers) => {
+const removeDuplicatesFromSortedArray = (numbers: Array<number>): number => {
   let k = 1;
 
   let left = 0;

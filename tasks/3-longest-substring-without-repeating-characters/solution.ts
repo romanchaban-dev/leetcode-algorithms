@@ -1,7 +1,7 @@
 // LeetCode 3: Longest Substring Without Repeating Characters
 // https://leetcode.com/problems/longest-substring-without-repeating-characters/
 
-const lengthOfLongestSubstring = (string) => {
+const lengthOfLongestSubstring = (string: string): number => {
   if (typeof string !== "string")
     throw new TypeError("Parametr string must be a string type");
 
